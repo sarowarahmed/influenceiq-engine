@@ -1,6 +1,6 @@
 # 🔖 Advertising Sales Predictor
 
-An app powered by a Machine Learning model, to forecast sales based on TV, Newspaper, and Online Advertising')
+An app powered by a Machine Learning model, to forecast sales based on TV, Newspaper, and Online Advertising
 
 ## Demo App
 ```
