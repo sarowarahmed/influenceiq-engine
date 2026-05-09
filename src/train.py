@@ -141,7 +141,7 @@ def save_artifacts(xgb_model, ridge_model):
 # -------------------------------
 def run_training(data_path):
     df = load_data(data_path)
-    X, y = feature_target_split(df)
+    X, y, feature_cols = feature_target_split(df)
 
     print("📊 Evaluating XGBoost...")
     xgb_metrics = evaluate_model(build_xgb_pipeline(), X, y)
@@ -160,8 +160,16 @@ def run_training(data_path):
     residuals_info = residual_analysis(xgb_model, X, y)
 
     save_artifacts(xgb_model, ridge_model)
+    save_metadata(feature_cols)
 
     print("✅ Models saved to /models")
+
+    def save_metadata(feature_cols):
+        metadata = {
+            "feature_names": feature_cols
+        }
+
+        joblib.dump(metadata, "models/metadata.pkl")
 
     return {
         "xgb_metrics": xgb_metrics,
