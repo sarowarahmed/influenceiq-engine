@@ -72,3 +72,14 @@ def generate_data(n=5000, social_weight=0.55, seed=42):
     )
 
     return df
+
+import os
+
+os.makedirs("data", exist_ok=True)
+
+df.to_csv(
+    "data/marketing_data.csv",
+    index=False
+)
+
+print("✅ Dataset saved to data/marketing_data.csv")
