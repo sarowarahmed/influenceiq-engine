@@ -128,22 +128,22 @@ def generate_data(
     # Saturation Effects
     # -----------------------
     tv_effect = (
-        40 * saturation(tv_adstock)
+        8 * saturation(tv_adstock)
     )
 
     social_effects = (
-        60 * saturation(social_adstock)
+        100 * saturation(social_adstock)
     )
 
     news_effect = (
-        15 * saturation(news_adstock)
+        4 * saturation(news_adstock)
     )
 
     # -----------------------
     # Interaction Effect
     # -----------------------
     interaction = (
-        0.0005
+        0.0001
         * df["TV"]
         * df["Social"]
     )
