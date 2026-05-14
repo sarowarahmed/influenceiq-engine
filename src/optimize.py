@@ -30,13 +30,14 @@ def build_feature_row(tv, social, newspaper):
     import pandas as pd
 
     df = pd.DataFrame({
-        "Date": [pd.Timestamp.today()],
+        "Date": [pd.Timestamp("2024-01-01")],
         "TV": [tv],
         "Social": [social],
         "Newspaper": [newspaper]
     })
 
     df = engineer_features(df)
+    df["Time_Index"] = 5000
 
     X = df[feature_cols]
 
