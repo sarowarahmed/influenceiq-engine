@@ -84,10 +84,23 @@ def optimize_budget(total_budget):
     ]
 
     # Channel Bounds
+    min_channel_spend = total_budget * 0.1
+
     bounds = [
-        (0, total_budget * 0.6),  # TV
-        (0, total_budget * 0.6),  # Social
-        (0, total_budget * 0.6),  # Newspaper
+        (
+            min_channel_spend,
+            total_budget * 0.6
+        ),
+
+        (
+            min_channel_spend,
+            total_budget * 0.6
+        ),
+
+        (
+            min_channel_spend,
+            total_budget * 0.6
+        )
     ]
 
     # Constraint
