@@ -1,7 +1,15 @@
 streamlit
-numpy
 pandas
-matplotlib
+numpy
 scikit-learn
+xgboost
+plotly
+matplotlib
+scipy
+faker
+joblib
+mlflow
+shap
+pytest
 LinearRegression
 statistics
