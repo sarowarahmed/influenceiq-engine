@@ -76,7 +76,7 @@ def generate_data(
     # -----------------------
     # Ad Spend Features
     # -----------------------
-    df["TV"] = np.random.gamma(
+    df["YouTube"] = np.random.gamma(
         shape=2,
         scale=50,
         size=rows
