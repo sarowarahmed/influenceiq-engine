@@ -88,7 +88,7 @@ def generate_data(
         size=rows
     )
 
-    df["TikTok"] = np.random.exponential(
+    df["Twitter"] = np.random.exponential(
         scale=30,
         size=rows
     )
@@ -157,10 +157,16 @@ def generate_data(
         size=rows
     )
 
+    niche_multiplier = (
+        df["Niche"]
+        .map(niche_weights)
+    )
+    
     # -----------------------
-    # Final Sales Equation
+    # Final Target Equation
     # -----------------------
     df["Engagement_Score"] = (
+    (
         50
         + yt_effect
         + insta_effects
@@ -170,6 +176,8 @@ def generate_data(
         + trend
         + noise
     )
+    * niche_multiplier
+)
 
     return df
 
