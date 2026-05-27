@@ -43,13 +43,13 @@ def saturation(x, alpha=0.01):
 # Main Data Generator
 # -------------------------------
 def generate_data(
-    rows=10000,
+    rows=5000,
     social_effect=0.55
 ):
 
     # Time Index
     days = pd.date_range(
-        start="2010-01-01",
+        start="2011-01-01",
         periods=rows
     )
 

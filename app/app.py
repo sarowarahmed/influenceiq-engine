@@ -87,6 +87,8 @@ Capabilities:
 )
 
 
+
+
 # -----------------------------------
 # Load Models
 # -----------------------------------
@@ -138,6 +140,10 @@ market_condition = st.sidebar.selectbox(
     ]
 )
 
+competitor_mode = st.sidebar.checkbox(
+    "Enable Competitor Benchmarking"
+)
+
 show_raw_data = st.sidebar.checkbox(
     "Show Raw Dataset"
 )
@@ -157,6 +163,16 @@ elif market_condition == "Social Media Boom":
 elif market_condition == "Economic Slowdown":
     scenario_multiplier = 0.85
 
+# -----------------------------------
+# Competitor Benchmark Logic
+# -----------------------------------
+if competitor_mode:
+
+    benchmark_multiplier = 0.9
+
+else:
+
+    benchmark_multiplier = 1.0
 
 # -----------------------------------
 # Hero Section
@@ -303,6 +319,8 @@ with optimizer_tab:
     marginal_roi = calculate_marginal_roi(
         allocation
     )
+
+    allocation["Predicted_Sales"] *= benchmark_multiplier
 
     opt1, opt2, opt3, opt4 = st.columns(4)
 
