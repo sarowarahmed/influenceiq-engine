@@ -109,17 +109,17 @@ def generate_data(
     # -----------------------
     # Adstock Effects
     # -----------------------
-    yt_adstock = adstock(
+    YouTube_adstock = adstock(
         df["YouTube"].values,
         decay=0.6
     )
 
-    insta_adstock = adstock(
+    Instagram_adstock = adstock(
         df["Instagram"].values,
         decay=0.4
     )
 
-    x_adstock = adstock(
+    Twitter_adstock = adstock(
         df["Twitter"].values,
         decay=0.2
     )
@@ -127,16 +127,16 @@ def generate_data(
     # -----------------------
     # Saturation Effects
     # -----------------------
-    yt_effect = (
-        8 * saturation(yt_adstock)
+    YouTube_effect = (
+        8 * saturation(YouTube_adstock)
     )
 
-    insta_effects = (
-        100 * saturation(insta_adstock)
+    Instagram_effects = (
+        100 * saturation(Instagram_adstock)
     )
 
-    x_effect = (
-        4 * saturation(x_adstock)
+    Twitter_effect = (
+        4 * saturation(Twitter_adstock)
     )
 
     # -----------------------
@@ -193,9 +193,9 @@ def generate_data(
     df["Engagement_Score"] = (
     (
         50
-        + yt_effect
-        + insta_effects
-        + x_effect
+        + YouTube_effect
+        + Instagram_effects
+        + Twitter_effect
         + interaction
         + seasonality
         + trend

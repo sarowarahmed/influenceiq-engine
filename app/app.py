@@ -181,9 +181,9 @@ st.markdown(
     f"""
 <div class="hero-box">
 
-# 🚀 AdSpend ROI Forecaster Engine
+# 🚀 InfluenceIQ Platform
 
-### AI-Powered Marketing Optimization Platform
+### AI Creator Intelligence Platform
 
 <p class="small-text">
 Built using:
@@ -310,7 +310,7 @@ with analytics_tab:
 # ===================================
 with optimizer_tab:
 
-    st.subheader("💰 Budget Allocation Optimizer")
+    st.subheader("Creator Campaign Optimizer")
 
     allocation = optimize_budget(
         budget
@@ -340,7 +340,7 @@ with optimizer_tab:
     )
 
     opt4.metric(
-        "📈 Predicted Sales",
+        "📈 Predicted Engagement",
         allocation['Predicted_Sales']
     )
 
