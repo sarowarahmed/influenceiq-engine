@@ -21,7 +21,7 @@ from src.generate_data import generate_data
 # Page Config
 # -----------------------------------
 st.set_page_config(
-    page_title="Model Health Dashboard",
+    page_title="AI Model Health",
     page_icon="🩺",
     layout="wide"
 )

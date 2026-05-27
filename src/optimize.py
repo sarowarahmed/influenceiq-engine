@@ -30,7 +30,7 @@ def build_feature_row(youtube, instagram, twitter):
     import pandas as pd
 
     df = pd.DataFrame({
-        "Date": [pd.Timestamp("2026-01-01")],
+        "Date": [pd.Timestamp("2025-01-01")],
         "YouTube": [youtube],
         "Instagram": [instagram],
         "Twitter": [twitter]

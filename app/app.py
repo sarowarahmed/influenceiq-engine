@@ -18,7 +18,7 @@ from src.features import engineer_features
 # Page Config
 # -----------------------------------
 st.set_page_config(
-    page_title="AdSpend ROI Forecaster Engine",
+    page_title="InfluenceIQ Engine",
     page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -70,12 +70,12 @@ st.sidebar.image(
 )
 
 st.sidebar.title(
-    "AdSpend Intelligence"
+    "InfluenceIQ Platform"
 )
 
 st.sidebar.markdown(
     """
-### 🚀 AI Marketing Platform
+### 🚀 AI Creator Intelligence Platform
 
 Capabilities:
 - Budget Optimization
@@ -123,7 +123,7 @@ feature_df = engineer_features(
 st.sidebar.header("⚙️ Scenario Simulator")
 
 budget = st.sidebar.slider(
-    "Total Marketing Budget",
+    "Creator Campaign Budget",
     min_value=1000,
     max_value=50000,
     value=10000,
@@ -133,10 +133,10 @@ budget = st.sidebar.slider(
 market_condition = st.sidebar.selectbox(
     "Market Scenario",
     [
-        "Stable Market",
-        "Holiday Surge",
-        "Social Media Boom",
-        "Economic Slowdown"
+        "Stable Audience",
+        "Viral Trend",
+        "Insta Explosion",
+        "Audience Fatigue"
     ]
 )
 
@@ -229,22 +229,22 @@ avg_insta = round(
 metric1, metric2, metric3, metric4 = st.columns(4)
 
 metric1.metric(
-    "📈 Latest Engagement",
+    "📈 Latest Budget",
     latest_engagement
 )
 
 metric2.metric(
-    "💰 Avg Engagement",
+    "💰 Avg Budget",
     avg_engagement
 )
 
 metric3.metric(
-    "📺 Avg YouTube Engagement",
+    "📺 Avg YouTube Budget",
     avg_yt
 )
 
 metric4.metric(
-    "📱 Avg Instagram Engagement",
+    "📱 Avg Instagram Budget",
     avg_insta
 )
 
@@ -279,7 +279,7 @@ with analytics_tab:
     )
 
 
-    st.subheader("📱 Creator Platform Budget Distribution")
+    st.subheader("📱 Average Creator Budget")
 
     spend_df = df[[
         "YouTube",

@@ -25,7 +25,7 @@ from src.features import engineer_features
 # Page Config
 # -----------------------------------
 st.set_page_config(
-    page_title="Retrain ML Model",
+    page_title="Retraining Studio",
     page_icon="🔄",
     layout="wide"
 )
