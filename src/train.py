@@ -36,11 +36,11 @@ def feature_target_split(df):
         "Instagram",
         "Twitter",
 
-        "yt_Adstock",
-        "insta_Adstock",
-        "x_Adstock",
+        "YouTube_Adstock",
+        "Instagram_Adstock",
+        "Twitter_Adstock",
 
-        "yt_insta_Interaction",
+        "YouTube_Instagram_Interaction",
 
         "Month",
         "Time_Index"

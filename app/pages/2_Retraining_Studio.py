@@ -34,7 +34,7 @@ st.set_page_config(
 # -----------------------------------
 # Header
 # -----------------------------------
-st.title("🔄 Model Retraining System")
+st.title("🔄 InfluenceIQ Retraining Studio")
 
 st.markdown(
     """
@@ -43,7 +43,7 @@ This page demonstrates:
 - Schema Validation
 - Automated Retraining
 - Model Comparison
-- MLOps Workflow Concepts
+- Production ML Lifecycle Monitoring
 """
 )
 
@@ -75,7 +75,7 @@ base_df = load_data(
 # -----------------------------------
 # File Upload
 # -----------------------------------
-st.subheader("📤 Upload New Marketing Data")
+st.subheader("📤 Upload New Creator Campaign Data")
 
 uploaded_file = st.file_uploader(
     "Upload CSV File",
@@ -98,7 +98,7 @@ required_columns = [
 # -----------------------------------
 # Existing Model Metrics
 # -----------------------------------
-st.subheader("📊 Current Production Model Metrics")
+st.subheader("📊 Current InfluenceIQ Production Metrics")
 
 base_feature_df = engineer_features(
     base_df.copy()
@@ -344,5 +344,5 @@ if uploaded_file is not None:
 st.markdown("---")
 
 st.caption(
-    "Retraining Pipeline powered by Streamlit, Scikit-learn & ML Engineering Best Practices"
+    "InfluenceIQ Retraining Suite • Powered by Streamlit & Scikit-learn"
 )

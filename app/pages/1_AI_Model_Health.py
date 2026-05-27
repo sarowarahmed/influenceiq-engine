@@ -66,7 +66,7 @@ This dashboard demonstrates:
 st.sidebar.header("⚠️ Drift Simulation")
 
 social_effect_strength = st.sidebar.slider(
-    "Social Media Effectiveness",
+    "Instagram Engagement Influence",
     min_value=0.10,
     max_value=0.80,
     value=0.55,
@@ -125,8 +125,8 @@ with col2:
 with col3:
     drift_status = (
         "⚠️ Drift Detected"
-        if r2 < 0.65
-        else "✅ Stable"
+        if r2 < 0.70
+        else "✅ Audience Dynamics Stable"
     )
 
     st.metric(
@@ -138,7 +138,7 @@ with col3:
 # -----------------------------------
 # Predicted vs Actual
 # -----------------------------------
-st.subheader("📈 Predicted vs Actual Budget Distribution")
+st.subheader("📈 Predicted vs Actual Engagement")
 
 comparison_df = pd.DataFrame({
     "Actual": y,
@@ -315,5 +315,5 @@ st.plotly_chart(
 st.markdown("---")
 
 st.caption(
-    "Model Health Monitoring powered by Streamlit, Plotly & Scikit-learn"
+    "InfluenceIQ Monitoring Suite • Powered by Streamlit, Plotly & Scikit-learn"
 )
