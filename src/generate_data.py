@@ -157,6 +157,31 @@ def generate_data(
         size=rows
     )
 
+    # -----------------------
+    # Creator Niches
+    # -----------------------
+    niches = [
+        "Beauty",
+        "Gaming",
+        "Tech",
+        "Fitness",
+        "Fashion"
+    ]
+
+    niche_weights = {
+        "Beauty": 1.25,
+        "Gaming": 1.15,
+        "Tech": 1.10,
+        "Fitness": 1.05,
+        "Fashion": 1.20
+    }
+
+
+    df["Niche"] = np.random.choice(
+        niches,
+        size=rows
+    )
+
     niche_multiplier = (
         df["Niche"]
         .map(niche_weights)
