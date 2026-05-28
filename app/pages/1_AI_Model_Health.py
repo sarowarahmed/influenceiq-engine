@@ -128,7 +128,7 @@ with col3:
     drift_status = (
         "⚠️ Drift Detected"
         if r2 < 0.70
-        else "✅ Audience Dynamics Stable"
+        else "✅ Audience Stable"
     )
 
     st.metric(
