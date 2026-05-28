@@ -6,7 +6,8 @@ import numpy as np
 import tempfile
 import os
 import joblib
-
+root_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(root_dir))
 from sklearn.metrics import (
     r2_score,
     mean_absolute_error

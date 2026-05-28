@@ -6,7 +6,8 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import joblib
-
+root_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(root_dir))
 from sklearn.metrics import (
     mean_absolute_error,
     r2_score

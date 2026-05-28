@@ -4,7 +4,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import joblib
+import sys
+from pathlib import Path
 
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(root_dir))
 from src.optimize import (
     optimize_budget,
     calculate_marginal_roi
