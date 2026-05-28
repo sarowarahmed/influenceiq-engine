@@ -113,7 +113,7 @@ xgb_model = joblib.load(
 # Load Dataset
 # -----------------------------------
 df = load_data(
-    "data/marketing_data.csv"
+    root_dir/"data/marketing_data.csv"
 )
 
 feature_df = engineer_features(
