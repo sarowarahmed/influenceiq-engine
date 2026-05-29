@@ -15,7 +15,7 @@ InfluenceIQ Engine is a production-oriented machine learning platform that helps
 
 # 🌐 Live Demo
 
-👉 [Launch App](YOUR_DEPLOYMENT_LINK)
+👉 [Launch App](https://influenceiq-engine.streamlit.app/)
 
 ---
 
